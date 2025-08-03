@@ -248,8 +248,70 @@ body {
 }
 
 /* Join section */
+.join-section {
+  margin-top: 120px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("../assets/news-letter-bg.png");
+  height: 530px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+.join-header {
+  font-size: 50px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+.submit-box {
+  display: flex;
+}
+
+.join-btn {
+  background-color: #e95a08;
+
+  padding: 20px 50px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+}
+.submit-box input[type="email"] {
+  padding: 8px 20px;
+  width: 644px;
+  border: none;
+  outline: none;
+}
+.submit-box input[type="email"]::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
 
 @media screen and (max-width: 576px) {
+  /* join section */
+  .join-section {
+    height: 275px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 23px;
+  }
+  .join-btn {
+    padding: 8px 10px;
+  }
+  .submit-box input[type="email"] {
+    padding: 15px 20px;
+    width: 220px;
+  }
+  .join-header {
+    font-size: 20px;
+    font-weight: 700;
+  }
   /* latest deals */
   .cards-container {
     margin-top: 46px;
