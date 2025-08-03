@@ -116,7 +116,8 @@ body {
 .cart-btn {
   border: none;
   background-color: #e95a08;
-  padding: 19px 80px;
+  padding: 19px 20px;
+  width: 100%;
 }
 
 .cart-btn a {
@@ -280,6 +281,9 @@ body {
   font-size: 16px;
   border: none;
 }
+.join-btn:hover {
+  background-color: #e9a208;
+}
 .submit-box input[type="email"] {
   padding: 8px 20px;
   width: 644px;
@@ -324,79 +328,19 @@ body {
   color: rgb(107, 114, 128);
   text-decoration: none;
 }
-.social-links img{
- width: 36px;
- height: 36px;
+.social-links img {
+  width: 36px;
+  height: 36px;
 }
+
+/* responsive */
+
 @media screen and (max-width: 576px) {
-  /* footer section */
-  .footer-colummns {
-    flex-direction: column;
-  }
-  .footer-logo .footer-details {
-    font-size: 16px;
-    margin-top: 16px;
-  }
-  .social-links {
-    justify-content: start;
-  }
-
-  /* join section */
-  .join-section {
-    height: 275px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    gap: 23px;
-  }
-  .join-btn {
-    padding: 8px 10px;
-  }
-  .submit-box input[type="email"] {
-    padding: 15px 20px;
-    width: 220px;
-  }
-  .join-header {
-    font-size: 20px;
-    font-weight: 700;
-  }
-  /* latest deals */
-  .cards-container {
-    margin-top: 46px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-  }
-  .card {
-    height: 206px; /* reset */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  .cards-container .bold-class {
-    font-size: 20px;
-    font-weight: 700;
-  }
-
-  .cards-container .bold-a {
-    font-size: 16px;
-    font-weight: 600;
-  }
-  .deals-content .deals-header {
-    font-size: 24px;
-    font-weight: 700px;
-    margin-bottom: 16px;
-  }
-  .deals-content .deals-detail {
-    font-size: 14px;
-  }
   .mobile-cont {
     padding-left: 16px;
     padding-right: 16px;
   }
+
   /* banner + navbar responsive */
 
   .navbar {
@@ -441,8 +385,9 @@ body {
     padding: 0 16px;
   }
   .cart-btn {
-    padding: 19px 38px;
+    padding: 19px 20px;
   }
+
   .cart-contents h4 {
     font-size: 16px;
   }
@@ -454,6 +399,7 @@ body {
   .plant-lover {
     flex-direction: column;
     gap: 18px;
+    margin-top: 50px;
   }
   .badge {
     display: none;
@@ -474,5 +420,73 @@ body {
   }
   .contents li {
     margin-top: 16px;
+  }
+
+  /* latest deals */
+  .cards-container {
+    margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+  .card {
+    height: 206px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .cards-container .bold-class {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .cards-container .bold-a {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .deals-content .deals-header {
+    font-size: 24px;
+    font-weight: 700px;
+    margin-bottom: 16px;
+  }
+  .deals-content .deals-detail {
+    font-size: 14px;
+  }
+
+  /* join section */
+  .join-section {
+    height: 275px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 23px;
+    margin-top: 50px;
+  }
+  .join-btn {
+    padding: 8px 10px;
+  }
+
+  .submit-box input[type="email"] {
+    padding: 15px 20px;
+    width: 220px;
+  }
+  .join-header {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  /* footer section */
+  .footer-colummns {
+    flex-direction: column;
+  }
+  .footer-logo .footer-details {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+  .social-links {
+    justify-content: start;
   }
 }
