@@ -20,6 +20,7 @@
 }
 body {
   background-color: #f5f8ff;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -69,9 +70,7 @@ body {
   font-size: 22px;
   color: rgba(0, 0, 0, 0.5);
 }
-.mobile-break {
-  display: none;
-}
+
 /* cart section */
 .cart-section {
   text-align: center;
@@ -112,7 +111,6 @@ body {
   font-weight: 700;
   color: #111111;
   margin-bottom: 30px;
-  margin-top: 20px;
 }
 
 .cart-btn {
@@ -124,7 +122,7 @@ body {
 .cart-btn a {
   color: #ffffff;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -162,13 +160,129 @@ body {
 .contents {
   color: rgba(0, 0, 0, 0.5);
   font-size: 22px;
+  padding-left: 40px;
 }
 
 .contents li {
   margin-top: 20px;
 }
 
+/* latest deals */
+.deals-container {
+  margin-top: 120px;
+}
+.deals-content {
+  text-align: center;
+}
+.deals-content h2 {
+  font-size: 50px;
+  font-weight: 700;
+}
+.deals-content p {
+  margin-top: 16px;
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.card {
+  height: 206px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  gap: 16px;
+  border-radius: 22px;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "bloom zabo zabo"
+    "ana zabo zabo";
+  gap: 28px;
+  margin-top: 120px;
+}
+
+.card a {
+  color: rgb(255, 255, 255);
+}
+.box1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/deal-bloom.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: bloom;
+}
+.box2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/deal-ana.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: ana;
+}
+.box3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/deal-zabo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-area: zabo;
+  height: 100%;
+}
+.cards-container .bold-h2 {
+  font-weight: 700;
+  font-size: 20px;
+}
+.cards-container .bold-class {
+  font-size: 40px;
+  font-weight: 700px;
+
+  margin-top: 20px;
+}
+.cards-container .bold-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+.cards-container .bold-a {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+/* Join section */
+
 @media screen and (max-width: 576px) {
+  /* latest deals */
+  .cards-container {
+    margin-top: 46px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+  .card {
+    height: 206px; /* reset */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .cards-container .bold-class {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .cards-container .bold-a {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .deals-content .deals-header {
+    font-size: 24px;
+    font-weight: 700px;
+    margin-bottom: 16px;
+  }
+  .deals-content .deals-detail {
+    font-size: 14px;
+  }
   .mobile-cont {
     padding-left: 16px;
     padding-right: 16px;
@@ -194,7 +308,7 @@ body {
     padding: 0 16px 0px 16px;
   }
   .banner-contents .banner-header {
-    font-size: 26px;
+    font-size: 30px;
   }
   .banner-contents .banner-text {
     margin-top: 13px;
@@ -202,6 +316,28 @@ body {
   }
   .mobile-break {
     display: inline;
+  }
+
+  /* cart-section */
+  .cart-section h3 {
+    font-size: 24px;
+  }
+  .cart-contents .text {
+    font-size: 14px;
+  }
+  .cart-display {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding: 0 16px;
+  }
+  .cart-btn {
+    padding: 19px 38px;
+  }
+  .cart-contents h4 {
+    font-size: 16px;
+  }
+  .cart-contents .price {
+    font-size: 16px;
   }
 
   /* plan section responsive */
